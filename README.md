@@ -39,6 +39,7 @@ Backend: https://github.com/arturbernardo/grupoabackend2
 Completar o projeto front end.
 Criar componentes reutilizaveis para a lista.
 Fazer com que as urls sejam configuradas de forma dinâmica.
+Corrigir problema com CORS.
 
 
 ## URLS
