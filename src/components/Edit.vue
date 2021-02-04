@@ -11,7 +11,9 @@ export default {
         }
     },
     created() {
-        axios.get(`https://backendgrupoa.herokuapp.com/api/student/` + 1)
+      var config = {
+        headers: { 'Access-Control-Allow-Origin': '*' }};
+        axios.get(`https://backendgrupoa.herokuapp.com/api/student/` + 1, config)
             .then((response) => {
             // JSON responses are automatically parsed.
             this.infos = response.data;
