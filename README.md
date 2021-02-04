@@ -20,5 +20,31 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Projeto Vue.js front end da aplicação de estudantes.
+
+## Framework
+Vue + Vuetify
+
+## Rotas
+Novas rotas devem ser configuradas no arquivo main.js
+
+## Configurations
+As configuraçoes, como as urls da api, ainda estão hard coded.
+
+
+Backend: https://github.com/arturbernardo/grupoabackend2
+
+
+## Melhorias
+Completar o projeto front end.
+Criar componentes reutilizaveis para a lista.
+Fazer com que as urls sejam configuradas de forma dinâmica.
+
+
+## URLS
+
+Deploy Back End (Heroku)
+- https://backendgrupoa.herokuapp.com/api/student
+
+Deploy Front End (netlify)
+- https://wizardly-perlman-0e9237.netlify.app/#/
