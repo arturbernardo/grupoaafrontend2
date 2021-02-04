@@ -41,7 +41,7 @@ export default {
         }
     },
     created() {
-        axios.get(`http://127.0.0.1:8000/api/student/`)
+        axios.get(`https://backendgrupoa.herokuapp.com/api/student/`)
             .then((response) => {
             // JSON responses are automatically parsed.
             this.infos = response.data;
