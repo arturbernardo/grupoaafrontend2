@@ -1,28 +1,56 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th></th>
+              <td>id</td>
+              <td>name</td>
+              <td>email</td>
+              <td>cpf</td>
+              <td>ca</td>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="info in infos" v-bind:key="info">
+              <td>{{info.id}}</td>
+              <td>{{info.name}}</td>
+              <td>{{info.email}}</td>
+              <td>{{info.cpf}}</td>
+              <td>{{info.ca}}</td>
+              <td>
+                <a v-bind:href="'/student/'+info.id" >Editar</a> |
+                <a href="/student/delete">Deletar</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import axios from 'axios';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    name: 'App',
+
+    data() {
+        return {
+            infos: null,
+        }
+    },
+    created() {
+        axios.get(`http://127.0.0.1:8000/api/student/`)
+            .then((response) => {
+            // JSON responses are automatically parsed.
+            this.infos = response.data;
+
+        }
+    )
+    .catch(e => {
+            this.errors.push(e)
+        })
+    }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
