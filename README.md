@@ -1,21 +1,51 @@
-# frontendwp
+# frontend
 
-> A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
+## Project setup
+```
 npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+Projeto Vue.js front end da aplicação de estudantes.
+
+## Framework
+Vue + Vuetify
+
+## Rotas
+Novas rotas devem ser configuradas no arquivo main.js
+
+## Configurations
+As configuraçoes, como as urls da api, ainda estão hard coded.
+
+
+Backend: https://github.com/arturbernardo/grupoabackend2
+
+
+## Melhorias
+Completar o projeto front end.
+Criar componentes reutilizaveis para a lista.
+Fazer com que as urls sejam configuradas de forma dinâmica.
+Corrigir problema com CORS.
+
+
+## URLS
+
+Deploy Back End (Heroku)
+- https://backendgrupoa.herokuapp.com/api/student
+
+Deploy Front End (netlify)
+- https://wizardly-perlman-0e9237.netlify.app/#/
